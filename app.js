@@ -3,7 +3,6 @@
 var
   request = require('request'),
   url = require('url'),
-
   httpProxy = require('http-proxy'),
   jsdom = require('jsdom'),
 
