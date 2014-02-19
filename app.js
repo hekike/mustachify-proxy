@@ -117,8 +117,9 @@ server = httpProxy.createServer(
         });
 
         res.foxy.result = window.document.innerHTML;
-
-        next();
+        
+        window.close();
+        return next();
       }
     );        
   },
