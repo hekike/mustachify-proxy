@@ -108,6 +108,10 @@ server = httpProxy.createServer(
       function (errors, window) {
         var $ = window.$;
 
+        if(!$) {
+          return next();
+        }
+
         $('img').each(function() {
           var src = $(this).attr('src');
           if(src.indexOf('http') < 0) {
